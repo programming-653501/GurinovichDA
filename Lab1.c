@@ -55,7 +55,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		case 0:
 			printf("\n%d", number2 % 10);
 			break;
-        case 1:
+        	case 1:
 			printf("\n%d", (number2 / 100) % 10);
 			break;
 		case 2:
