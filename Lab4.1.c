@@ -14,7 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	char text[201];
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	printf("Введите текст:\n");
+	printf("Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚:\n");
 	gets(text);
 	reverse(text);
 	puts(text);
