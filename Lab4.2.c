@@ -19,7 +19,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	SetConsoleOutputCP(1251);
 	f = fopen("D:\\University\\Progs\\Labs\\Programming\\Lab 4\\4.2\\text.txt","r");
 	if (f == NULL) {
-		printf("Невозможно открыть файл!\n");
+		printf("РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р»!\n");
 		getch();
 		return 0;
 	}
@@ -27,25 +27,25 @@ int _tmain(int argc, _TCHAR* argv[])
 		fgets(text,200,f);
 		printf("%s", text);
 		if (check(')', text)) {
-			printf("\nНеправильно расставлены () %d раз(a)",check(')', text));
+			printf("\nРќРµРїСЂР°РІРёР»СЊРЅРѕ СЂР°СЃСЃС‚Р°РІР»РµРЅС‹ () %d СЂР°Р·(a)",check(')', text));
 			q = 0;
 		}
 		else
 			q = 1;
 		if (check('}', text)) {
-			printf("\nНеправильно расставлены {} %d раз(a)",check('}', text));
+			printf("\nРќРµРїСЂР°РІРёР»СЊРЅРѕ СЂР°СЃСЃС‚Р°РІР»РµРЅС‹ {} %d СЂР°Р·(a)",check('}', text));
 			q = 0;
 		}
 		else
 			q = 1;
 		if (check(']', text)) {
-			printf("\nНеправильно расставлены [] %d раз(a)",check(']', text));
+			printf("\nРќРµРїСЂР°РІРёР»СЊРЅРѕ СЂР°СЃСЃС‚Р°РІР»РµРЅС‹ [] %d СЂР°Р·(a)",check(']', text));
 			q = 0;
 		}
 		else
 			q = 1;
 		if (q==1) {
-			printf("\nВсе скобки расставлены правильно\n");
+			printf("\nР’СЃРµ СЃРєРѕР±РєРё СЂР°СЃСЃС‚Р°РІР»РµРЅС‹ РїСЂР°РІРёР»СЊРЅРѕ\n");
 		}
 	}
 	fclose(f);
