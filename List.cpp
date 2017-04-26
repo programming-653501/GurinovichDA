@@ -87,7 +87,7 @@ void List::Search(char *searchingName){
 	item = First;
 	while (item!=NULL){
 		if (strcmp(item->name,searchingName)==0) {
-            printf("%s %s %s %s %f\n", item->name, item->PersonalAccount, item->PassportNumber, item->DepositType, item->CurrentBalance);
+			printf("%s %s %s %s %f\n", item->name, item->PersonalAccount, item->PassportNumber, item->DepositType, item->CurrentBalance);
 			c = 1;
 		}
 		item = item->next;
@@ -97,4 +97,22 @@ void List::Search(char *searchingName){
 	}
 }
 
+void List::PersonalAccountInfo(char *PersonalAccount){
+	int c = 0;
+	ListItem *item;
+	item = First;
+	while (item!=NULL){
+		if (strcmp(item->PersonalAccount,PersonalAccount)==0) {
+			printf("Personal Account:%s\nCurrent Balance:%f\n", item->PersonalAccount, item->CurrentBalance);
+			c = 1;
+		}
+		item = item->next;
+	}
+	if (c == 0) {
+		printf("The account hasn't been found!\n");
+	}
+}
 
+void List::SortDeposit(){
+
+}
