@@ -26,9 +26,15 @@ int _tmain(int argc, _TCHAR* argv[])
 				x1 = 1;
 			}
 			if (answer == 1) {
-				char *personalAccount = new char [21];
-				cout<<"Enter the number of the account:";
-				gets(personalAccount);
+                if (count == 0) {
+					cout<<"No clients in the list!\n";
+				}
+				else{
+					char *personalAccount = new char [21];
+					cout<<"Enter the number of the account:";
+					gets(personalAccount);
+					depositors.PersonalAccountInfo(personalAccount);
+				}
 			}
 			else if (answer == 2) {
 				if (count == 0) {
@@ -36,6 +42,33 @@ int _tmain(int argc, _TCHAR* argv[])
 				}
 				else
 					depositors.Show();
+			}
+			else if (answer == 3) {
+				if (count == 0) {
+					cout<<"No clients in the list!\n";
+				}
+				else {
+					char *Name = new char [31];
+					printf("Enter the name of the client that you want to find:");
+					gets(Name);
+					depositors.Search(Name);
+				}
+			}
+			else if (answer == 4) {
+				if (count == 0) {
+					cout<<"No clients in the list!\n";
+				}
+				else {
+					depositors.SortDeposit();
+				}
+			}
+			else if (answer == 5) {
+            	if (count == 0) {
+					cout<<"No clients in the list!\n";
+				}
+				else {
+					depositors.SortDeposit();
+				}
 			}
 			else if (answer == 6) {
 				system("cls");
